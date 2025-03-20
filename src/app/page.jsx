@@ -1,13 +1,13 @@
 "use client";
-import { FloatingPaths } from "@/components/FloatingPaths";
+import { FloatingPaths } from "../components/FloatingPaths.jsx";
 import { motion } from "framer-motion";
-import FloatingNav from "@/components/floating-nav";
-import { Button } from "@/components/ui/button"
+import FloatingNav from "../components/floating-nav";
+import { Button } from "../components/ui/button"
 import React from "react";
 import { Code, Users, Rocket } from "lucide-react";
-import SpotlightCard from '@/components/SpotlightCard';
-import Steps from "@/components/steps";
-import { WorldMap } from "@/components/world-map"
+import SpotlightCard from '../components/SpotlightCard.jsx';
+import Steps from "../components/steps";
+import { WorldMap } from "../components/world-map"
 import Link from "next/link"
 const Footer = () => {
     return (
@@ -23,7 +23,7 @@ const Footer = () => {
     );
 };
 
-export default function Home({ title = "Find Your Perfect Developer Match" }) {
+export default function Home({ title = "Share Smarter, Store Safer, Access Anytime!" }) {
     const words = title.split(" ");
     return (
         <>
@@ -121,19 +121,19 @@ export default function Home({ title = "Find Your Perfect Developer Match" }) {
                         {
                             icon: <Rocket size={40} className="text-blue-400" />,
                             title: "Innovating with Technology",
-                            text: "Building AI-powered, scalable, and secure web solutions to solve real-world problems.",
+                            text: "Building scalable, and secure web solutions to solve real-world problems.",
                             color: "rgba(96, 165, 250,1)"
                         },
                         {
                             icon: <Code size={40} className="text-green-400" />,
-                            title: "Empowering Developers & Businesses",
-                            text: "Providing tools, mentorship, and resources to accelerate innovation and growth.",
+                            title: "Empowering Businesses & Communities",
+                            text: "Providing tools, and resources to accelerate innovation and growth.",
                             color: "rgba(74 ,222 ,128 ,1)"
                         },
                         {
                             icon: <Users size={40} className="text-purple-400" />,
                             title: "Building a Strong Community",
-                            text: "Connecting developers, sharing knowledge, and organizing tech events.",
+                            text: "Connecting safely, sharing.",
                             color: "rgba(192, 132, 252,1)"
                         },
                     ].map((item, index) => (
@@ -170,9 +170,7 @@ export default function Home({ title = "Find Your Perfect Developer Match" }) {
                         </span>
                     </p>
                     <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-                        Break free from traditional boundaries. Work from anywhere, at the
-                        comfort of your own studio apartment. Perfect for Nomads and
-                        Travellers.
+                        Break free from traditional boundaries.
                     </p>
                 </div>
                 <WorldMap
@@ -228,9 +226,9 @@ export default function Home({ title = "Find Your Perfect Developer Match" }) {
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {[
-                            { name: "Anish", review: "Dev Match helped me find my dream job!" },
-                            { name: "Priya", review: "Amazing platform! Found great developers easily." },
-                            { name: "Abhay", review: "Amazing platform! Found great developers easily." },
+                            { name: "Admin", review: "Able to access all" },
+                            { name: "Manager", review: "Have all the authority but has to gert permissions" },
+                            { name: "User", review: "This is the user." },
                         ].map(({ name, review }) => (
                             <SpotlightCard
                                 key={name}
@@ -261,7 +259,7 @@ export default function Home({ title = "Find Your Perfect Developer Match" }) {
                         </motion.span>
                     ))}
                 </h2>
-                <p className="text-lg mt-2">Join thousands of developers and recruiters today.</p>
+                <p className="text-lg mt-2">Join Us today.</p>
                 <div className="mt-6">
                     <Link href={"/signup"}>
                         <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-md">

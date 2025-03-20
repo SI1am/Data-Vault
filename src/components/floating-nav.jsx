@@ -48,8 +48,8 @@ export default function FloatingNav({ name = "/" }) {
                     md:dark:bg-gray-900 dark:border-gray-700">
                         {[
                             { href: "/", label: "Home" },
-                            { href: "/jobs", label: "About" }, // Changed "DEV" to "Data"
-                            { href: "/developers", label: "Pricing" }, // Changed "Match" to "Vault"
+                            { href: "/", label: "About" }, // Changed "DEV" to "Data"
+                            { href: "/userDashboard", label: "DashBoard" }, // Changed "Match" to "Vault"
                             { href: "/login", label: "Login" }
                         ].map(({ href, label }) => (
                             <li key={href}>
