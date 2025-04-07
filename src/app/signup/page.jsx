@@ -1,13 +1,10 @@
 "use client";
-import { useState } from "react";
 import { Github, Chrome } from "lucide-react";
 import { FloatingPaths } from "@/components/FloatingPaths";
 import FloatingNav from "@/components/floating-nav";
 import Link from "next/link";
 
 export default function AuthPage() {
-    const [isLogin, setIsLogin] = useState(false); // false = signup, true = login
-
     return (
         <>
             <FloatingNav />
@@ -18,18 +15,16 @@ export default function AuthPage() {
                 </div>
                 <div className="relative z-10 w-96 p-6 bg-card border border-border rounded-xl shadow-lg shadow-primary/10 backdrop-blur-md">
                     <h2 className="text-3xl font-semibold text-center mb-6 animate-fade-in">
-                        {isLogin ? "Login" : "Sign Up"}
+                        Sign Up
                     </h2>
 
-                    {/* Form */}
+                    {/* Sign Up Form */}
                     <form className="space-y-4">
-                        {!isLogin && (
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                className="w-full h-14 p-3 border border-border bg-input text-foreground rounded-lg focus:ring-2 focus:ring-primary"
-                            />
-                        )}
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            className="w-full h-14 p-3 border border-border bg-input text-foreground rounded-lg focus:ring-2 focus:ring-primary"
+                        />
                         <input
                             type="email"
                             placeholder="Email"
@@ -44,7 +39,7 @@ export default function AuthPage() {
                             type="submit"
                             className="w-full h-14 bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition-transform transform hover:scale-105"
                         >
-                            {isLogin ? "Login" : "Sign Up"}
+                            Sign Up
                         </button>
                     </form>
 
@@ -66,15 +61,15 @@ export default function AuthPage() {
                         ))}
                     </div>
 
-                    {/* Toggle Login/Signup */}
+                    {/* Redirect to Login */}
                     <p className="text-center mt-6 text-sm">
-                        {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-                        <button
-                            onClick={() => setIsLogin(!isLogin)}
+                        Already have an account?{" "}
+                        <Link
+                            href="/login"
                             className="text-blue-500 hover:text-blue-700 ml-1"
                         >
-                            {isLogin ? "Sign Up" : "Login"}
-                        </button>
+                            Login
+                        </Link>
                     </p>
                 </div>
             </div>

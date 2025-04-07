@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Github, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Github, Chrome } from "lucide-react";
 import { FloatingPaths } from "@/components/FloatingPaths";
 import FloatingNav from "@/components/floating-nav";
 import Link from "next/link";
+
 export default function AuthPage() {
     const [isLogin, setIsLogin] = useState(true);
     const [userType, setUserType] = useState("developer");
@@ -49,9 +50,7 @@ export default function AuthPage() {
                     <div className="flex items-center justify-center mt-6 space-x-4 animate-slide-in">
                         {[
                             { icon: <Github size={24} />, name: "GitHub" },
-                            { icon: <Facebook size={24} className="text-blue-600" />, name: "Facebook" },
-                            { icon: <Twitter size={24} className="text-blue-400" />, name: "Twitter" },
-                            { icon: <Linkedin size={24} className="text-blue-500" />, name: "LinkedIn" },
+                            { icon: <Chrome size={24} className="text-red-500" />, name: "Google" },
                         ].map((social, index) => (
                             <button
                                 key={index}
@@ -67,7 +66,9 @@ export default function AuthPage() {
                     {/* Toggle Login/Signup */}
                     <p className="text-center mt-6 text-sm">
                         Don't have an account?
-                        <Link className="text-blue-500 hover:text-blue-700" href={"/signup"}> Create Account</Link>
+                        <Link className="text-blue-500 hover:text-blue-700" href={"/signup"}>
+                            {" "}Create Account
+                        </Link>
                     </p>
                 </div>
             </div>

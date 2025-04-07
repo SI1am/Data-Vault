@@ -113,7 +113,7 @@ export default function Home({ title = "Secure Your Digital Vault with Confidenc
                         {
                             icon: <Rocket size={40} className="text-blue-400" />,
                             title: "Secure Infrastructure",
-                            text: "Leverage blockchain and encryption to build airtight systems for storing sensitive data.",
+                            text: "Leverage encryption to build airtight systems for storing sensitive data.",
                             color: "rgba(96, 165, 250,1)",
                         },
                         {
@@ -163,7 +163,7 @@ export default function Home({ title = "Secure Your Digital Vault with Confidenc
                         </span>
                     </p>
                     <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-                        Access your encrypted files from anywhere in the world — securely, reliably, and instantly.
+                        Access your files from anywhere in the world — securely, reliably, and instantly.
                     </p>
                 </div>
                 <WorldMap
