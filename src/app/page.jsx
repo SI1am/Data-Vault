@@ -24,7 +24,7 @@ const Footer = () => {
     );
 };
 
-export default function Home({ title = "Secure Your Digital Vault with Confidence" }) {
+export default function Home({ title = "Secure Your Digital Vault" }) {
     const words = title.split(" ");
     return (
         <>
@@ -137,7 +137,7 @@ export default function Home({ title = "Secure Your Digital Vault with Confidenc
                             <div className="p-4 sm:p-6 flex flex-col items-center text-center">
                                 <div className="mb-4">{item.icon}</div>
                                 <div className="mb-4 text-lg font-semibold">{item.title}</div>
-                                <p className="text-sm text-gray-300">{item.text}</p>
+                                <p className="text-sm text-gray-600">{item.text}</p>
                             </div>
                         </SpotlightCard>
                     ))}

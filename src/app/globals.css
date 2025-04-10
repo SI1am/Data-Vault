@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+    --background-light: #f7f4f4;
+    --background-dark: #000000;
+    --primary-light: #3F0071;
+    --primary-dark: #150050;
 }
+
+body {
+    @apply transition-colors duration-300;
+}
+
+.dark body {
+    @apply bg-[#000000] text-white;
+}
+
+body {
+    @apply bg-[#f7f4f4] text-black;
+}
+
+/* Add any other global styles below */
 
 @layer base {
   :root {
