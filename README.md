@@ -27,29 +27,32 @@ Storage: Amazon S3 / File System
 Security: AES Encryption, JWT, HTTPS
 
 🔧 Installation
-1.Clone the repository:
+Clone the repository:
 git clone https://github.com/yourusername/datavault.git
 cd datavault
-2.Install dependencies:
+
+Install dependencies:
 npm install
-3.Set environment variables in a .env file:
+
+Set environment variables in a .env file:
 PORT=5000
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 AWS_ACCESS_KEY=your_aws_key
 AWS_SECRET_KEY=your_aws_secret
-4. Run the Application
+
+Run the application:
 npm start
 
-📽 Demo Video
+📌 To Do
+ Add multi-language support
 
+ Enable Two-Factor Authentication (2FA)
 
-
-
-
+ Create mobile-friendly interface
 
 🤝 Contributing
 Contributions are welcome! Please fork the repo and submit a pull request.
 
 📜 License
-MIT License © 2025 Tanya
+MIT License © 2025 Your Name
